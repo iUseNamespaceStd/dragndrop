@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropzone {
+    position: relative;
+    background-color: #c4c4c4;
+    width: 400px;
+    height: 250px;
+}
+
+#trigger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 250px;
+    cursor: pointer;
+}
+
+#uploaded {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 400px;
+    height: 250px;
+}
