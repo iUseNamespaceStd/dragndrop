@@ -27,10 +27,33 @@ body {
     cursor: pointer;
 }
 
-#uploaded {
+#image {
     display: none;
     position: absolute;
     top: 0;
     width: 400px;
     height: 250px;
+}
+
+.close-btn {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    background-color: #121212;
+    color: #fff;
 }
