@@ -28,15 +28,25 @@ closeBtn.addEventListener('click', function() {
     label.style.display = "none";
 })
 
-dropzone.addEventListener('dragenter', preventDefault);
-dropzone.addEventListener('dragleave', preventDefault);
-dropzone.addEventListener('dragover', preventDefault);
-dropzone.addEventListener('drop', preventDefault);
-
-dropzone.addEventListener('drop', handleDrop, false);
-function preventDefault(e) {
+dropzone.addEventListener('dragenter', function(e) {
     e.preventDefault();
-}
+    dropzone.className += " active";
+});
+
+dropzone.addEventListener('dragleave', function(e) {
+    e.preventDefault();
+    dropzone.className = dropzone.className.replace(" active", "");
+});
+
+dropzone.addEventListener('dragover', function(e) {
+    e.preventDefault();
+});
+
+dropzone.addEventListener('drop', function(e) {
+    e.preventDefault();
+});
+
+dropzone.addEventListener('drop', handleDrop);
  
 function handleDrop(e) {
     let data = e.dataTransfer;
@@ -72,5 +82,6 @@ closeDrop.addEventListener('click', function() {
     imageDrop.style.display = "none";
     closeDrop.style.display = "none";
     labelDrop.style.display = "none";
+    dropzone.className = dropzone.className.replace(" active", "");
 })
 

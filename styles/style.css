@@ -16,6 +16,12 @@ body {
     border: 5px dotted #c4c4c4;
     width: 400px;
     height: 250px;
+    opacity: 0.8;
+}
+
+.dropzone.active {
+    opacity: 1;
+    /* border: 10px dotted blue; */
 }
 
 #trigger {
