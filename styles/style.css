@@ -21,7 +21,7 @@ body {
 
 .dropzone.active {
     opacity: 1;
-    /* border: 10px dotted blue; */
+    border: 5px dotted #949494;
 }
 
 #trigger {
