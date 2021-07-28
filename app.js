@@ -21,6 +21,9 @@ function getInputFile(e) {
     }
 }
 
+//e.preventdefault() - prevents the default behaviour of the browser
+// i.e. open the dropped image in a new tab
+
 closeBtn.addEventListener('click', function() {
     img.src = "";
     img.style.display = "none";
@@ -28,11 +31,13 @@ closeBtn.addEventListener('click', function() {
     label.style.display = "none";
 })
 
+//add active class when item enters dropzone
 dropzone.addEventListener('dragenter', function(e) {
     e.preventDefault();
     dropzone.className += " active";
 });
 
+//remove active class when item leaves dropzone
 dropzone.addEventListener('dragleave', function(e) {
     e.preventDefault();
     dropzone.className = dropzone.className.replace(" active", "");
@@ -54,7 +59,7 @@ function handleDrop(e) {
 
     const reader = new FileReader();
     reader.readAsDataURL(e.dataTransfer.files[0]);
-    // labelDrop.innerHTML = e.dataTransfer.files[0].name;
+    
     reader.onload = function (e) {
         if (files.length > 0) {
         
